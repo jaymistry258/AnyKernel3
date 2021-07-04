@@ -327,8 +327,8 @@ flash_boot() {
             $comp -dc $kernel > kernel;
           fi;
           $bin/magiskboot hexpatch kernel 736B69705F696E697472616D667300 77616E745F696E697472616D667300;
-          if [ "$(file_getprop $home/anykernel.sh do.systemless)" == 1 ]; then
-            strings kernel | grep -E -m1 'Linux version.*#' > $home/vertmp;
+          if [ "$(file_getprop ${home}/anykernel.sh do.modules)$(file_getprop ${home}/anykernel.sh do.systemless)" == "11" ]; then
+            strings kernel | grep -E 'Linux version.*#' > $home/vertmp;
           fi;
           if [ "$comp" ]; then
             $bin/magiskboot compress=$comp kernel kernel.$comp;
