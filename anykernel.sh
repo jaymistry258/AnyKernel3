@@ -4,7 +4,7 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=Redcliff Kernel by @RedcliffOP
+kernel.string=Alza Kernel by @Jaymistry258 based on Pure Kernel by @Pzqqt
 do.devicecheck=1
 do.modules=0
 do.systemless=1
